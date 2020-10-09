@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85852473-3E74-42A2-A225-00B13DFAEF17}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pelicula</RootNamespace>
+    <AssemblyName>pelicula</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Office\Office15\DCF\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Camadas\BLL\agendamento.cs" />
+    <Compile Include="Camadas\BLL\caixa.cs" />
+    <Compile Include="Camadas\BLL\cliente.cs" />
+    <Compile Include="Camadas\BLL\fornecedor.cs" />
+    <Compile Include="Camadas\BLL\funcionario.cs" />
+    <Compile Include="Camadas\BLL\orcamento.cs" />
+    <Compile Include="Camadas\BLL\pagamento.cs" />
+    <Compile Include="Camadas\BLL\produto.cs" />
+    <Compile Include="Camadas\BLL\servico.cs" />
+    <Compile Include="Camadas\BLL\status.cs" />
+    <Compile Include="Camadas\BLL\tipo_prod.cs" />
+    <Compile Include="Camadas\BLL\tipo_serv.cs" />
+    <Compile Include="Camadas\BLL\veiculo.cs" />
+    <Compile Include="Camadas\DAL\agendamento.cs" />
+    <Compile Include="Camadas\DAL\caixa.cs" />
+    <Compile Include="Camadas\DAL\cliente.cs" />
+    <Compile Include="Camadas\DAL\Conexao.cs" />
+    <Compile Include="Camadas\DAL\fornecedor.cs" />
+    <Compile Include="Camadas\DAL\funcionario.cs" />
+    <Compile Include="Camadas\DAL\orcamento.cs" />
+    <Compile Include="Camadas\DAL\pagamento.cs" />
+    <Compile Include="Camadas\DAL\produto.cs" />
+    <Compile Include="Camadas\DAL\servico.cs" />
+    <Compile Include="Camadas\DAL\status.cs" />
+    <Compile Include="Camadas\DAL\tipo_prod.cs" />
+    <Compile Include="Camadas\DAL\tipo_serv.cs" />
+    <Compile Include="Camadas\DAL\veiculo.cs" />
+    <Compile Include="Camadas\Model\agendamento.cs" />
+    <Compile Include="Camadas\Model\caixa.cs" />
+    <Compile Include="Camadas\Model\cliente.cs" />
+    <Compile Include="Camadas\Model\fornecedor.cs" />
+    <Compile Include="Camadas\Model\funcionario.cs" />
+    <Compile Include="Camadas\Model\orcamento.cs" />
+    <Compile Include="Camadas\Model\pagamento.cs" />
+    <Compile Include="Camadas\Model\produto.cs" />
+    <Compile Include="Camadas\Model\servico.cs" />
+    <Compile Include="Camadas\Model\status.cs" />
+    <Compile Include="Camadas\Model\tipo_prod.cs" />
+    <Compile Include="Camadas\Model\tipo_serv.cs" />
+    <Compile Include="Camadas\Model\veiculo.cs" />
+    <Compile Include="clienteDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clienteDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fornecedorDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fornecedorDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendamento.Designer.cs">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaixa.Designer.cs">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrcamento.Designer.cs">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioCliente.Designer.cs">
+      <DependentUpon>frmRelatorioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioFornecedor.Designer.cs">
+      <DependentUpon>frmRelatorioFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioFuncionario.Designer.cs">
+      <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioProduto.Designer.cs">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioVeiculos.Designer.cs">
+      <DependentUpon>frmRelatorioVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServico.Designer.cs">
+      <DependentUpon>frmServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipo_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipo_prod.Designer.cs">
+      <DependentUpon>frmTipo_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipo_serv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipo_serv.Designer.cs">
+      <DependentUpon>frmTipo_serv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVeiculos.Designer.cs">
+      <DependentUpon>frmVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funcionarioDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>funcionarioDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="produtoDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>produtoDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="veiculosDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>veiculosDataset.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAgendamento.resx">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaixa.resx">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrcamento.resx">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioCliente.resx">
+      <DependentUpon>frmRelatorioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioFornecedor.resx">
+      <DependentUpon>frmRelatorioFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioFuncionario.resx">
+      <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioProduto.resx">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioVeiculos.resx">
+      <DependentUpon>frmRelatorioVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServico.resx">
+      <DependentUpon>frmServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipo_prod.resx">
+      <DependentUpon>frmTipo_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipo_serv.resx">
+      <DependentUpon>frmTipo_serv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVeiculos.resx">
+      <DependentUpon>frmVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="relatorioCliente.rdlc" />
+    <EmbeddedResource Include="relatorioFornecedor.rdlc" />
+    <EmbeddedResource Include="relatorioFuncionario.rdlc" />
+    <EmbeddedResource Include="relatorioProduto.rdlc" />
+    <EmbeddedResource Include="relatorioVeiculos.rdlc" />
+    <None Include="clienteDataset.xsc">
+      <DependentUpon>clienteDataset.xsd</DependentUpon>
+    </None>
+    <None Include="clienteDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>clienteDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="clienteDataset.xss">
+      <DependentUpon>clienteDataset.xsd</DependentUpon>
+    </None>
+    <None Include="fornecedorDataset.xsc">
+      <DependentUpon>fornecedorDataset.xsd</DependentUpon>
+    </None>
+    <None Include="fornecedorDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fornecedorDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="fornecedorDataset.xss">
+      <DependentUpon>fornecedorDataset.xsd</DependentUpon>
+    </None>
+    <None Include="funcionarioDataset.xsc">
+      <DependentUpon>funcionarioDataset.xsd</DependentUpon>
+    </None>
+    <None Include="funcionarioDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>funcionarioDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="funcionarioDataset.xss">
+      <DependentUpon>funcionarioDataset.xsd</DependentUpon>
+    </None>
+    <None Include="produtoDataset.xsc">
+      <DependentUpon>produtoDataset.xsd</DependentUpon>
+    </None>
+    <None Include="produtoDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>produtoDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="produtoDataset.xss">
+      <DependentUpon>produtoDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="veiculosDataset.xsc">
+      <DependentUpon>veiculosDataset.xsd</DependentUpon>
+    </None>
+    <None Include="veiculosDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>veiculosDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="veiculosDataset.xss">
+      <DependentUpon>veiculosDataset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308911_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308918_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308924_configuration 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308928_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308930_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467308993_Client_Male_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1467309043_cartoon-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
